@@ -4,12 +4,12 @@ public class Product {
     private String code;
     private String name;
     private String description;
-    private String quantity;
+    private int quantity;
     private double price;
     private String type;
 
 
-    public Product(String code, String name, String description, String quantity, Double price, String type) {
+    public Product(String code, String name, String description, int quantity, Double price, String type) {
         this.code = code;
         this.name = name;
         this.description = description;

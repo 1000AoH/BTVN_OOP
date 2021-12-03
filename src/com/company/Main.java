@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -49,7 +50,7 @@ public class Main {
         System.out.println("Enter product description: ");
         String description = scanner.nextLine();
         System.out.println("Enter product quantity: ");
-        String quantity = scanner.nextLine();
+        int quantity = Integer.parseInt(scanner.nextLine()) ;
         System.out.println("Enter product price: ");
         double price = Double.parseDouble(scanner.nextLine());
         System.out.println("Enter product type: ");
@@ -60,10 +61,10 @@ public class Main {
 
     private static void searchProduct() {
         System.out.print("Product to search for: ");
-        String searchItem = scanner.nextLine();
+        String searchItem = scanner.nextLine().toUpperCase();
         int count = 0;
         for (int i = 0; i<list.size(); i++){
-            if (list.get(i).getName().equals(searchItem)){
+            if (list.get(i).getName().toUpperCase().equals(searchItem)){
                 System.out.println("The item is in the list");
                 System.out.println(list.get(i));
                 count ++;
